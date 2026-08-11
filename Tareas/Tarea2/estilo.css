@@ -1,4 +1,3 @@
-/* ===== Reset basico ===== */
 * {
     margin: 0;
     padding: 0;
@@ -7,153 +6,146 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: white;
+    color: gray;
 }
 
-/* ===== Contenedor general ===== */
-.page-wrapper {
+.pagina {
     max-width: 1000px;
     margin: 20px auto;
-    background-color: #FFFFFF;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Encabezado (header) ===== */
-.topbar {
-    background-color: #E67E22;   /* naranja */
-    color: #FFFFFF;
+.encabezado {
+    background-color: orange; 
+    color: white;
     padding: 15px 25px;
     display: flex;
-    align-items: center;   /* centra el logo y el texto verticalmente */
+    align-items: center; 
     gap: 20px;
 }
 
-.topbar .logo {
+.encabezado .logo {
     width: 70px;
     height: 70px;
     object-fit: contain;
-    background-color: #FFFFFF;
+    background-color: white;
     border-radius: 50%;
     padding: 5px;
 }
 
-.topbar .titulo-texto {
+.encabezado .titulo-texto {
     text-align: left;
 }
 
-.topbar h1 {
+.encabezado h1 {
     font-size: 28px;
     letter-spacing: 1px;
 }
 
-.topbar p {
+.encabezado p {
     font-size: 14px;
     margin-top: 5px;
 }
-
-/* ===== Layout: sidebar + contenido ===== */
-.layout {
+.diseño {
     display: flex;
     flex-direction: row;
     min-height: 500px;
 }
 
-/* ===== Menu lateral (sidebar) ===== */
-.sidebar {
+.barra {
     width: 220px;
-    background-color: #8E44AD;   /* morado */
+    background-color: purple; 
     padding: 20px 0;
 }
 
-.sidebar a {
+.barra a {
     display: block;
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
     padding: 12px 20px;
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sidebar a:hover {
-    background-color: #732D91;
+.barra a:hover {
+    background-color: purple;
 }
 
-.sidebar a.activo {
-    background-color: #5B2C6F;
-    border-left: 4px solid #E67E22;
+.barra a.activo {
+    background-color: purple;
+    border-left: 4px solid orange;
 }
 
-/* ===== Contenido principal ===== */
-.content {
+.contenido {
     flex: 1;
     padding: 25px 30px;
-    background-color: #FDFEFE;
+    background-color: white;
 }
 
-.content h2 {
-    background-color: #E74C3C;   /* rojo/naranja */
-    color: #FFFFFF;
+.contenido h2 {
+    background-color: orangered;   
+    color: white;
     padding: 12px 15px;
     margin-bottom: 15px;
     border-radius: 4px;
 }
 
-.content h3 {
-    color: #8E44AD;
+.contenido h3 {
+    color: purple;
     margin-top: 20px;
     margin-bottom: 8px;
-    border-bottom: 2px solid #E67E22;
+    border-bottom: 2px solid orange;
     display: inline-block;
 }
 
-.content p {
+.contenido p {
     line-height: 1.6;
     margin-bottom: 12px;
 }
 
-.content img {
+.contenido img {
     display: block;
     width: 300px;
     height: 220px;
-    object-fit: cover;   /* recorta la imagen para que no se deforme */
+    object-fit: cover; 
     margin: 15px auto;
-    border: 3px solid #E67E22;
+    border: 3px solid orange;
     border-radius: 6px;
 }
 
-.content ul, .content ol {
+.contenido ul, .content ol {
     margin-left: 25px;
     margin-bottom: 15px;
 }
 
-.content li {
+.contenido li {
     margin-bottom: 6px;
 }
 
-.content table {
+.contenido table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-.content th {
-    background-color: #8E44AD;
-    color: #FFFFFF;
+.contenido th {
+    background-color: purple;
+    color: white;
     padding: 8px;
     text-align: left;
 }
 
-.content td {
+.contenido td {
     padding: 8px;
-    border: 1px solid #DDD;
+    border: 1px solid white;
 }
 
-/* ===== Pie de pagina ===== */
 footer {
-    background-color: #2C3E50;
-    color: #FFFFFF;
+    background-color: gray;
+    color: white;
     text-align: center;
     padding: 12px;
     font-size: 13px;
