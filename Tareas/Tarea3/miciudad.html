@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Ciudad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+        }
+
+        .pagina {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px auto 50px;
+            grid-template-areas:
+                "encabezado encabezado"
+                "barra      contenido"
+                "pie        pie";
+            min-height: 100vh;
+        }
+
+        .encabezado {
+            grid-area: encabezado;
+            background-color: orange;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .encabezado .logo {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        .barra {
+            grid-area: barra;
+            background-color: purple;
+            padding-top: 20px;
+        }
+
+        .barra a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+        }
+
+        .barra a:hover {
+            background-color: indigo;
+        }
+
+        .barra a.activo {
+            background-color: indigo;
+        }
+
+        .contenido {
+            grid-area: contenido;
+            background-color: white;
+            padding: 25px;
+        }
+
+        .contenido h2 {
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+
+        .contenido img {
+            width: 250px;
+            height: 200px;
+        }
+
+        footer {
+            grid-area: pie;
+            background-color: darkslategray;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina">
+        <header class="encabezado">
+            <img src="Imagenes/logo-usfx.webp" alt="Logo USFX" class="logo">
+            <div class="titulo-texto">
+                <h1>Pagina Personal</h1>
+            </div>
+        </header>
+
+        <nav class="barra">
+            <a href="yo.html">Yo</a>
+            <a href="mifamilia.html">Mi Familia</a>
+            <a href="misamigos.html">Mis Amigos</a>
+            <a href="miciudad.html" class="activo">Mi Ciudad</a>
+            <a href="mishobbies.html">Mis Hobbies</a>
+        </nav>
+
+        <main class="contenido">
+            <h2>Mi Ciudad = Sucre</h2>
+            <img src="Imagenes/Image_Sucre.jpeg" alt="Foto de Sucre">
+            <p>
+                Vivo actualmente en la ciudad Blanca Sucre la Capital Constitucional de
+                Bolivia conocid por sus edificaciones coloniales pintadas de blanco.
+            </p>
+
+            <h3>Lugares que me gustan</h3>
+            <ul>
+                <li>Plaza 25 de Mayo</li>
+                <li>Recoleta</li>
+                <li>Parque Bolívar</li>
+                <li>Universidad San Francisco Xavier de Chuquisaca</li>
+            </ul>
+
+            <h3>Clima</h3>
+            <p>
+                Sucre tiene un clima templado ideal para recorrer sus calles empedradas y disfrutar de su arquitectura.
+            </p>
+        </main>
+
+        <footer>
+            Tarea 3 - Grid Carla_QS
+        </footer>
+    </div>
+</body>
+</html>
