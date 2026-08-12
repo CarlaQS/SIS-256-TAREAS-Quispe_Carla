@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de Desarrollo Web - Inscripcion</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<!--1.HEADER = cabecera-->
+<header class="cabecera">
+    <img src="images/logo.webp" alt="Logo USFX" width="60" height="60" class="logo">
+    <div class="titulos">
+        <h1>Taller de Desarrollo Web</h1>
+         <p>Universidad de San Francisco Xavier de Chuquisaca - Gestion 2026</p>
+        </div>
+     <nav class="menu">
+        <a href="#informacion">Informacion</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#inscripcion">Inscripcion</a>
+    </nav>
+    </header> 
+    <main>
+
+<!-- 2. S1 Informacion Gneral-->
+<section id="informacion" class="seccion">
+<h2>1.Informacion general</h2>
+<figure>
+<img src="images/image1.png" alt="Laboratorio Web" width="800" height="300">
+<figcaption>Laboratorio de Tecnologia y Desarrollo Web - Bloque C, USFX</figcaption>
+</figure>
+    <h3>Contenido del taller</h3>
+    <ul>
+          <li>Estructura semantica con HTML5</li>
+         <li>Hojas de estilo en cascada (CSS)</li>
+         <li>Maquetacion con Flexbox y CSS Grid</li>
+          <li>Formularios y validacion en el cliente</li>
+    </ul>
+<h3>Requisitos previos (en orden)</h3>
+    <ol>
+    <li>Tener aprobada la materia Programacion I</li>
+    <li>Contar con un editor de codigo instalado</li>
+    <li>Presentar el Laboratorio 1 concluido</li>
+    <li>Realizar el pago de matricula</li>
+    </ol>
+<h3>Glosario basico</h3>
+<dl>
+<dt>HTML</dt>
+<dd>Lenguaje de marcado que define la estructura del contenido.</dd>
+<dt>CSS</dt>
+    <dd>Lenguaje de estilo que define la presentacion visual.</dd>
+    <dt>Responsive</dt>
+    <dd>Diseno que se adapta al tamano de cualquier dispositivo.</dd>
+</dl>
+</section>
+<!-- 3. S2 Horarios-->
+<section id="horarios" class="seccion">
+<h2>2. Horarios y modulos</h2>
+<table>
+<caption>Cronograma del taller (4 modulos)</caption>
+<thead>
+<tr>
+    <th>Modulo</th>
+    <th>Contenido</th>
+    <th>Dia</th>
+    <th>Horario</th>
+    <th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td rowspan="2">Modulo I</td>
+    <td>Etiquetas y estructura HTML5</td>
+    <td>Lunes</td>
+    <td>08:00 - 10:00</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>Listas, tablas e imagenes</td>
+    <td>Miercoles</td>
+    <td>08:00 - 10:00</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td rowspan="2">Modulo II</td>
+     <td>Selectores y modelo de caja</td>
+    <td>Lunes</td>
+    <td>10:00 - 12:00</td>
+    <td>2</td>
+</tr>
+ <tr>
+    <td>Flexbox y CSS Grid</td>
+    <td>Viernes</td>
+    <td>10:00 - 12:00</td>
+    <td>2</td>
+</tr>
+<tr class="fila-total">
+   <td colspan="4">Total de horas academicas</td>
+   <td>8</td>
+</tr>
+</tbody>
+</table>
+
+   <p>Consulta el calendario oficial en
+      <a href="https://www.usfx.bo" target="_blank" rel="noopener">el sitio de la USFX</a>.
+    </p>
+    </section>
+
+<!-- 4. s3 Formulario-->
+ <section id="inscripcion" class="seccion">
+    <h2>3. Formulario de inscripcion</h2>
+   <form method="POST" action="procesar.php">
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Perez Rojas" minlength="5" required>
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" name="correo" placeholder="usuario@usfx.bo" required>
+        <label for="clave">Contrasena</label>
+        <input type="password" id="clave" name="clave" minlength="6" required>
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input type="date" id="nacimiento" name="nacimiento" required>
+        <label for="semestre">Semestre que cursa</label>
+        <input type="number" id="semestre" name="semestre" min="1" max="10" value="5">
+        <fieldset class="sub-radio">
+        <legend>Turno preferido</legend>
+        <label for="manana"><input type="radio" id="manana" name="turno" value="manana" checked> Manana</label>
+        <label for="tarde"><input type="radio" id="tarde" name="turno" value="tarde"> Tarde</label>
+        <label for="noche"><input type="radio" id="noche" name="turno" value="noche"> Noche</label>
+</fieldset>
+</fieldset>
+<fieldset>
+<legend>Datos academicos</legend>
+ <label for="carrera">Carrera</label>
+    <select id="carrera" name="carrera" required>
+    <option value="">-- Seleccione --</option>
+    <option value="sistemas">Ingenieria de Sistemas</option>
+    <option value="civil">Ingenieria Civil</option>
+    <option value="comercial">Ingenieria Comercial</option>
+    <option value="industrial">Ingenieria Industrial</option>
+</select>
+<label for="certificado">Adjuntar certificado</label>
+<input type="file" id="certificado" name="certificado">
+    <label for="comentarios">Comentarios</label>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuentanos que esperas del taller..."></textarea>
+    <input type="hidden" name="id_taller" value="TW2026">
+    <label class="checkbox-label" for="reglamento">
+    <input type="checkbox" id="reglamento" name="reglamento" required>
+    Acepto el reglamento del taller
+</label>
+</fieldset>
+<div class="botones">
+    <button type="submit">Enviar inscripcion</button>
+    <button type="reset">Limpiar</button>
+</div>
+</form>
+</section>
+</main>
+<!-- 5. S4 Pie de pagina-->
+<footer>
+    <p>SIS 256 - Tecnologia y Desarrollo Web · Ing. Carlos David Montellano Barriga</p>
+    <p>
+    <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a> |
+    <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a> |
+    <a href="mailto:informes@usfx.bo">informes@usfx.bo</a>
+    </p>
+</footer>
+</body>
+</html>

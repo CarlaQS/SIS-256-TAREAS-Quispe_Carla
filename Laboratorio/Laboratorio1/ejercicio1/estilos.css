@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: gray;
+    margin: 0;
+}
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cabecera {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: gray;
+    color: white;
+    padding: 15px 25px;
+    border-bottom: 4px solid : orange;
+}
+.cabecera .logo {
+    border-radius: 50%;
+}
+.cabecera .titulos {
+    flex: 1;
+}
+.cabecera .titulos h1 {
+    font-size: 20px;
+    margin: 0;
+}
+.cabecera .titulos p {
+    font-size: 12px;
+    margin: 2px 0 0 0;
+    color: white;
+}
+.cabecera .menu {
+    display: flex;
+    gap: 10px;
+}
+.cabecera .menu a {
+    color: white;
+    text-decoration: none;
+    background-color: gray;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.cabecera .menu a:hover {
+    background-color: orange;
+}
+
+.seccion {
+    background-color: white;
+    padding: 20px 25px;
+    margin-top: 20px;
+    border-left: 4px solid orange;
+    border-radius: 4px;
+}
+
+.seccion h2 {
+    color: gray;
+    border-bottom: 2px dashed orange;
+    padding-bottom: 8px;
+}
+figure {
+    margin: 15px 0;
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+figcaption {
+    font-size: 13px;
+    color: gray;
+    font-style: italic;
+    margin-top: 6px;
+}
+
+ul, ol, dl {
+    margin-bottom: 15px;
+}
+dt {
+    font-weight: bold;
+    color: purple;
+}
+dd {
+    margin: 0 0 8px 0;
+}
+.seccion table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.seccion caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: gray;
+}
+.seccion th {
+    background-color: gray;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+.seccion td {
+    padding: 8px;
+    border: 1px solid white;
+}
+.seccion tbody tr:nth-child(even) {
+    background-color: white;
+}
+.seccion tbody tr:hover {
+    background-color: white;
+}
+.fila-total {
+    font-weight: bold;
+    background-color: gray !important;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+fieldset {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+legend {
+    background-color: orange;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid gainsboro;
+    border-radius: 6px;
+    font-size: 14px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: orange;
+    box-shadow: 0 0 0 2px pink;
+}
+.sub-radio {
+    margin-top: 10px;
+}
+.sub-radio label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+}
+.checkbox-label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 15px;
+}
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"] {
+    background-color: gray;
+    color: white;
+}
+button[type="submit"]:hover {
+    background-color: gray;
+}
+button[type="reset"] {
+    background-color: white;
+    color: gray;
+}
+button[type="reset"]:hover {
+    background-color: gray;
+}
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+footer a {
+    color: salmon;
+}
