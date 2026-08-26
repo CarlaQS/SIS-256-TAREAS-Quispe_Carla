@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Tablero de Ajedrez</h1>
+
+    <form action="tablero.php" method="GET">
+
+        <label for="filas">Introducir filas:</label><br>
+        <input type="number" id="filas" name="filas" min="1" required>
+        <br>
+        <label for="columnas">Introducir columnas:</label><br>
+        <input type="number" id="columnas" name="columnas" min="1" required>
+        <br>
+        <button type="submit">Dibujar</button>
+    </form>
+</body>
+</html>
