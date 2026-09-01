@@ -20,10 +20,8 @@
             $suma = $suma + $num;
         }
     ?>
-
     <div class="resultado">
         <p>La Suma es: <?php echo $suma; ?></p>
     </div>
-
 </body>
 </html>
