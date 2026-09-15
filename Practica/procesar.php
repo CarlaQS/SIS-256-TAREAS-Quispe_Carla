@@ -1,0 +1,38 @@
+<?php
+    $cadena = $_GET['cadena'];
+    $n = $_GET['n'];
+
+    $letras = str_split($cadena);
+    $guiones = str_repeat("-", $n);
+    $separada = implode($guiones, $letras);
+    $invertida = strrev($cadena);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table { border-collapse: collapse; }
+        td { width: 35px; height: 35px; text-align: center; border: 1px solid black; }
+        .rojo { background-color: red; color: white; }
+        .amarillo { background-color: yellow; }
+        .verde { background-color: green; color: white; }
+    </style>
+</head>
+<body>
+    <p>Cadena original: <?php echo $cadena; ?></p>
+    <p>Cadena separada: <?php echo $separada; ?></p>
+
+    <table><tr>
+        <?php
+            $colores = ["rojo", "amarillo", "verde"];
+            for ($i = 0; $i < count($letras); $i++) {
+                $clase = $colores[$i % 3];
+                echo "<td class='$clase'>" . $letras[$i] . "</td>";
+            }
+        ?>
+    </tr></table>
+
+    <p>Cadena invertida: <?php echo $invertida; ?></p>
+</body>
+</html>
