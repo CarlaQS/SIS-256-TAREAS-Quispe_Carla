@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Personal - AJAX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+        }
+        .pagina {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px auto 50px;
+            grid-template-areas:
+                "encabezado encabezado"
+                "barra      contenido"
+                "pie        pie";
+            min-height: 100vh;
+        }
+        .encabezado {
+            grid-area: encabezado;
+            background-color: orange;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0 20px;
+        }
+        .encabezado .logo {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .barra {
+            grid-area: barra;
+            background-color: purple;
+            padding-top: 20px;
+        }
+        .barra a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .barra a:hover, .barra a.activo {
+            background-color: indigo;
+        }
+        .contenido {
+            grid-area: contenido;
+            background-color: white;
+            padding: 25px;
+        }
+        .contenido h2 {
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+        .contenido img {
+            width: 250px;
+            height: 200px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background-color: purple;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid gray;
+        }
+        footer {
+            grid-area: pie;
+            background-color: darkslategray;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina">
+        <header class="encabezado">
+            <img src="Imagenes/logo-usfx.webp" alt="Logo USFX" class="logo">
+            <div class="titulo-texto">
+                <h1>Página Personal - AJAX</h1>
+            </div>
+        </header>
+
+        <nav class="barra">
+            <a data-url="contenido-yo.html" class="activo">Yo</a>
+            <a data-url="contenido-familia.html">Mi Familia</a>
+            <a data-url="contenido-amigos.html">Mis Amigos</a>
+            <a data-url="contenido-ciudad.html">Mi Ciudad</a>
+            <a data-url="contenido-hobbies.html">Mis Hobbies</a>
+        </nav>
+
+        <main class="contenido" id="contenedor-principal">
+           
+        </main>
+
+        <footer>
+            Tarea 4 - AJAX con Fetch API (Carla_QS)
+        </footer>
+    </div>
+
+    <script>
+
+        async function cargarSeccion(url, enlaceClickeado) {
+            try {
+                const contenedor = document.querySelector("#contenedor-principal");
+                contenedor.innerHTML = "<p>Cargando contenido...</p>"; 
+
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);[cite: 18, 19]
+                }
+                const html = await response.text(); 
+                contenedor.innerHTML = html; 
+                document.querySelectorAll(".barra a").forEach(a => a.classList.remove("activo"));
+                enlaceClickeado.classList.add("activo");
+
+            } catch (error) {
+                document.querySelector("#contenedor-principal").innerHTML = 
+                    `<p style="color: red;">No se pudo cargar la sección: ${error.message}</p>`;[cite: 18, 24]
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarSeccion("contenido-yo.html", document.querySelector(".barra a"));
+        });
+
+        document.querySelectorAll(".barra a").forEach(enlace => {
+            enlace.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                const url = enlace.getAttribute("data-url");
+                cargarSeccion(url, enlace);
+            });
+        });
+    </script>
+</body>
+</html>
