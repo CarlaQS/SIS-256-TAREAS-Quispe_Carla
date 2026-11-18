@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- SIS-256 - Laboratorio 4 - Ejercicio 2 - Integrantes: Carla Quispe y (nombre del compañero/a) -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de la Cafetería USFX</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div>
+            <h1>Cafetería USFX</h1>
+            <p>Administración del menú · Ejercicio 2 (AJAX con Fetch API)</p>
+        </div>
+        <nav>
+            <button type="button" class="activo" data-vista="inicio">Inicio</button>
+            <button type="button" data-vista="menu">Menú</button>
+            <button type="button" data-vista="nuevo">Nuevo producto</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <!-- Aquí se muestran los avisos (por ejemplo, "Producto eliminado") -->
+        <div id="mensajes"></div>
+        <!-- Aquí se carga cada vista -->
+        <div class="panel" id="contenido"></div>
+    </main>
+
+    <!-- Ventana modal (detalle y confirmación) -->
+    <div class="modal" id="modal">
+        <div class="modal-caja">
+            <div class="modal-titulo" id="modalTitulo"></div>
+            <div class="modal-cuerpo" id="modalCuerpo"></div>
+            <div class="modal-pie" id="modalPie"></div>
+        </div>
+    </div>
+
+    <p class="pie">SIS-256 · Tecnología y Desarrollo Web · Laboratorio 4</p>
+</body>
+</html>

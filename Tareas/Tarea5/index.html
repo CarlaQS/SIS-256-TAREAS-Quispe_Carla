@@ -99,10 +99,10 @@
         </header>
 
         <nav class="barra">
-            <a data-url="contenido-yo.html" class="activo">Yo</a>
-            <a data-url="contenido-familia.html">Mi Familia</a>
-            <a data-url="contenido-amigos.html">Mis Amigos</a>
-            <a data-url="contenido-ciudad.html">Mi Ciudad</a>
+            <a data-url="yo.html" class="activo">Yo</a>
+            <a data-url="mifamilia.html">Mi Familia</a>
+            <a data-url="misamigos.html">Mis Amigos</a>
+            <a data-url="miciudad.html">Mi Ciudad</a>
             <a data-url="contenido-hobbies.html">Mis Hobbies</a>
         </nav>
 
@@ -137,7 +137,7 @@
             }
         }
         document.addEventListener("DOMContentLoaded", () => {
-            cargarSeccion("contenido-yo.html", document.querySelector(".barra a"));
+            cargarSeccion("yo.html", document.querySelector(".barra a"));
         });
 
         document.querySelectorAll(".barra a").forEach(enlace => {
